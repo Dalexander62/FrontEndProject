@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>UFC Library</title>
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="../CSS/index.css" />
+    <link rel=”stylesheet”
+    href=”https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css”>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+  </head>
+  <body>
+    <div class="container">
+        <br>
+        <header id="topSection">
+<h1>UFC Fighter Library</h1>
+<br>
+<h2>Find UFC fighter!</h2>
+<br>
+
+        </header>
+<section id="searchSection">
+    <div id="getByNameOutput">
+    </div>
+    <div class="row-1">
+        <div class="col-1">
+        </div>
+        <div class="col-3">
+            <div class="input-group mb-3" id="getFighterByName">
+                <label for="findFighterByName" class="form-label"></label>
+                <input type="text" id="findFighterByName" class="form-control" placeholder="Search by name"
+                    name="findFighterByName">
+                    <button type="button" class="btn btn-dark"> SEARCH </button>           
+            </div>
+        </div>
+        <br>
+        <div id="getByDivisionOutput">
+        </div>
+        <div class="row-1">
+        
+        <div class="col-3">
+            <div class="input-group mb-3" id="getFighterByDivision">
+                <label for="findFighterByyDivision" class="form-label"></label>
+                <input type="text" id="findFighterByRank" class="form-control"
+                    placeholder="Search by division" name="findFighterByyDivision">
+                    <button type="button" class="btn btn-dark"> SEARCH </button>
+            </div>
+        </div>
+        <br>
+        <div id="getByCountryOutput">
+        </div>
+        <div class="row-1">
+        <div class="col-1"></div>
+        <div class="col-3">
+            <div class="input-group mb-3" id="getFighterByCountry">
+                <label for="findFighterByCountry" class="form-label"></label>
+                <input type="text" id="findFighterByCountry" class="form-control"
+                    placeholder="Search by nationality" name="findFighterByCountry">
+                    <button type="button" class="btn btn-dark"> SEARCH </button>
+            </div>
+        </section>
+        <br>
+        <br>
+        <section id="addSection">
+      <br>
+      <br>
+      
+        <h3> Add a new fighter to the index:  </h3>
+        <br>
+        <br>
+        <br>
+            <div id=fighterForm>
+                <form id="newFighterForm">
+                    <div class="row">
+                        <div class="col-4">
+                            <label class="form-label" for="findFighterByName"></label>
+                            <input type="text" class="form-control" id="findFighterByName" name="name" placeholder="Name" required>
+                            
+                        </div>
+                    
+                        <div class="col-4">
+                            <label class="form-label" for="findFighterByDivision"></label>
+                            <input type="text" class="form-control" id="findFighterByDivision" name="division"
+                                placeholder="Division" required>
+                    </div>
+                    <div class="col-4">
+                        <label class="form-label" for="findFighterByCountry"></label>
+                        <input type="text" class="form-control" id="findFighterByCountry" name="country"
+                            placeholder="Nationality" required>
+                    </div>
+                    <br>
+                    <br>
+                    <div class="col-12">
+                        <button type="submit" class="btn btn-dark"> SUBMIT </button>
+                        <button type="reset" class="btn btn-dark"> RESET </button>
+                </form>
+            </div>
+    </section>
+    <br>
+    <br>
+    <section id="getAllFighters">
+        <h2 id="welcome">Fighter index</h2>
+        <br>
+        <h3 id="scrollspyHeading4"></h3>
+        <div id="getAllOutput" class="card-group row row-cols-3 g-1 gx-3 gy-3">
+            <div id="getByIdOutput">
+            </div>
+        </div>
+        <br>
+    </section>
+    </container>
+    </div> 
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+    <script src="index.js"></script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
+        </style> 
+        <section id="background-image"></section>
+  </body>
+</html>
