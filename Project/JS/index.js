@@ -1,5 +1,5 @@
 "use strict";
-const baseURL = "http://localhost:8081";
+const baseURL = "http://localhost:8080";
 
 const getByNameOutput = document.querySelector("#getByNameOutput");
 const getByDivisionOutput = document.querySelector("#getByDivisionOutput");
@@ -67,7 +67,7 @@ const renderFighter = (fighter, outputDiv) => {
 };
 
 document
-  .querySelector("#createGameForm")
+  .querySelector("#newFighterForm")
   .addEventListener("submit", function (event) {
     event.preventDefault();
 
@@ -75,7 +75,7 @@ document
 
     const data = {
       name: form.name.value,
-      divison: form.divison.value,
+      division: form.division.value,
       country: form.country.value,
     };
     console.log("DATA:", data);
@@ -89,7 +89,7 @@ document
         form.reset();
         form.name.focus();
 
-        alert(`${form.name.value} has been added :)`);
+        alert(`${form.name.value} has been added, boom!`);
       })
       .catch((err) => console.log(err));
   });
@@ -106,6 +106,34 @@ const deleteFighter = (id) => {
     .catch((err) => console.log(err));
 };
 
+// document
+//   .querySelector("#newFighterForm")
+//   .addEventListener("update", function (event) {
+//     event.preventDefault();
+
+//     const form = event.target;
+
+//     const data = {
+//       name: form.name.value,
+//       division: form.division.value,
+//       country: form.country.value,
+//     };
+//     console.log("DATA:", data);
+
+//     axios
+//       .put(`${baseURL}/updateFighter${updateFighter}`, data)
+//       .then((res) => {
+//         console.log(res);
+//         getAllFighters();
+
+//         form.reset();
+//         form.name.focus();
+
+//         alert(`${form.name.value} has now been updated!`);
+//       })
+//       .catch((err) => console.log(err));
+//   });
+
 const updateFighter = (id) => {
   const data = {
     name: document.getElementById("fighterName").value,
@@ -113,7 +141,7 @@ const updateFighter = (id) => {
     country: document.getElementById("fighterCountry").value,
   };
   axios
-    .put(`${baseURL}/updateFighter/${id}`, data)
+    .put(`${baseURL}/updateFighter/${updateFighter}}`, data)
     .then((res) => {
       getAllFighters();
 
@@ -154,7 +182,7 @@ const getFighterByName = () => {
 
 const getFighterByDivison = () => {
   axios
-    .get(`${baseURL}/getFighterByDivison/${findFighterByDivison.value}`)
+    .get(`${baseURL}/getFighterByDivison/${findFighterByDivision.value}`)
     .then((res) => {
       console.log(res);
       const fighters = res.data;
